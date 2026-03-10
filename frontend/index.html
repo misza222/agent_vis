@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workflow Visualizer</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Workflow Visualizer</h1>
+            <div class="status" id="status">Connecting...</div>
+        </header>
+        
+        <div class="main-content">
+            <div class="canvas-container">
+                <canvas id="canvas"></canvas>
+            </div>
+            
+            <aside class="sidebar">
+                <div class="panel">
+                    <h2>Add Workflow</h2>
+                    <button id="addWorkflowBtn">+ Add Sample Workflow</button>
+                </div>
+                
+                <div class="panel">
+                    <h2>Add Flow</h2>
+                    <select id="workflowSelect">
+                        <option value="">Select workflow...</option>
+                    </select>
+                    <input type="text" id="flowPath" placeholder="e.g., n1,n2,n3">
+                    <input type="number" id="flowDuration" placeholder="Duration (ms)" value="5000">
+                    <button id="addFlowBtn">Add Flow</button>
+                </div>
+                
+                <div class="panel">
+                    <h2>Workflows</h2>
+                    <div id="workflowList"></div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    
+    <script src="/static/app.js"></script>
+</body>
+</html>
