@@ -162,7 +162,7 @@ if __name__ == "__main__":
     demo = sys.argv[1]
 
     try:
-        import websocket
+        import websocket  # noqa: F401
     except ImportError:
         print("Installing websockets library...")
         import subprocess
@@ -170,7 +170,6 @@ if __name__ == "__main__":
         subprocess.check_call(
             [sys.executable, "-m", "pip", "install", "websocket-client"]
         )
-        import websocket
 
     if demo == "basic":
         demo_basic()

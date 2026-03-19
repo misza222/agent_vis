@@ -42,8 +42,16 @@ function connectWebSocket() {
     };
     
     ws.onmessage = (event) => {
-        const message = JSON.parse(event.data);
-        handleMessage(message);
+        try {
+            const message = JSON.parse(event.data);
+            handleMessage(message);
+        } catch (e) {
+            console.error('Failed to parse message:', e);
+        }
+    };
+    
+    ws.onerror = (error) => {
+        console.error('WebSocket error:', error);
     };
 }
 

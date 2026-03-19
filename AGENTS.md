@@ -1,1 +1,1 @@
-use [~/.codex/AGENTS.md](~/.codex/AGENTS.md)
+CLAUDE.md
